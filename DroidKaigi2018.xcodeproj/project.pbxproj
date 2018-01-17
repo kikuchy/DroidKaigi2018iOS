@@ -232,7 +232,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "../gradlew -p $SRCROOT :ios:compileKonanApp";
+			shellScript = "./gradlew -p $SRCROOT :compileKonanApp";
 		};
 		95032972200D9ED600436AC9 /* Swap Main Binary to Konan's Binary */ = {
 			isa = PBXShellScriptBuildPhase;

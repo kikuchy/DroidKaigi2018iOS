@@ -1,0 +1,496 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9503294F200D9C6800436AC9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9503294E200D9C6800436AC9 /* AppDelegate.m */; };
+		95032952200D9C6800436AC9 /* SessionsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95032951200D9C6800436AC9 /* SessionsListViewController.m */; };
+		95032955200D9C6800436AC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95032953200D9C6800436AC9 /* Main.storyboard */; };
+		95032957200D9C6800436AC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95032956200D9C6800436AC9 /* Assets.xcassets */; };
+		9503295A200D9C6800436AC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95032958200D9C6800436AC9 /* LaunchScreen.storyboard */; };
+		9503295D200D9C6800436AC9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9503295C200D9C6800436AC9 /* main.m */; };
+		95032967200D9C6800436AC9 /* DroidKaigi2018Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 95032966200D9C6800436AC9 /* DroidKaigi2018Tests.m */; };
+		95032976200DB29100436AC9 /* src in Resources */ = {isa = PBXBuildFile; fileRef = 95032975200DB29100436AC9 /* src */; };
+		95032979200DB2B500436AC9 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 95032977200DB2B500436AC9 /* CMakeLists.txt */; };
+		9503297A200DB2B500436AC9 /* build.gradle in Resources */ = {isa = PBXBuildFile; fileRef = 95032978200DB2B500436AC9 /* build.gradle */; };
+		9503297D200DED9700436AC9 /* SessionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9503297C200DED9700436AC9 /* SessionDetailViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		95032963200D9C6800436AC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95032942200D9C6800436AC9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95032949200D9C6800436AC9;
+			remoteInfo = DroidKaigi2018;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9503294A200D9C6800436AC9 /* DroidKaigi2018.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DroidKaigi2018.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9503294D200D9C6800436AC9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9503294E200D9C6800436AC9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		95032950200D9C6800436AC9 /* SessionsListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SessionsListViewController.h; sourceTree = "<group>"; };
+		95032951200D9C6800436AC9 /* SessionsListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SessionsListViewController.m; sourceTree = "<group>"; };
+		95032954200D9C6800436AC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		95032956200D9C6800436AC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		95032959200D9C6800436AC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9503295B200D9C6800436AC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9503295C200D9C6800436AC9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		95032962200D9C6800436AC9 /* DroidKaigi2018Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DroidKaigi2018Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		95032966200D9C6800436AC9 /* DroidKaigi2018Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DroidKaigi2018Tests.m; sourceTree = "<group>"; };
+		95032968200D9C6800436AC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95032975200DB29100436AC9 /* src */ = {isa = PBXFileReference; lastKnownFileType = folder; path = src; sourceTree = "<group>"; };
+		95032977200DB2B500436AC9 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		95032978200DB2B500436AC9 /* build.gradle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = build.gradle; sourceTree = "<group>"; };
+		9503297B200DED9700436AC9 /* SessionDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SessionDetailViewController.h; sourceTree = "<group>"; };
+		9503297C200DED9700436AC9 /* SessionDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SessionDetailViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		95032947200D9C6800436AC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9503295F200D9C6800436AC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		95032941200D9C6800436AC9 = {
+			isa = PBXGroup;
+			children = (
+				95032978200DB2B500436AC9 /* build.gradle */,
+				95032977200DB2B500436AC9 /* CMakeLists.txt */,
+				95032975200DB29100436AC9 /* src */,
+				9503294C200D9C6800436AC9 /* DroidKaigi2018 */,
+				95032965200D9C6800436AC9 /* DroidKaigi2018Tests */,
+				9503294B200D9C6800436AC9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9503294B200D9C6800436AC9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9503294A200D9C6800436AC9 /* DroidKaigi2018.app */,
+				95032962200D9C6800436AC9 /* DroidKaigi2018Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9503294C200D9C6800436AC9 /* DroidKaigi2018 */ = {
+			isa = PBXGroup;
+			children = (
+				9503294D200D9C6800436AC9 /* AppDelegate.h */,
+				9503294E200D9C6800436AC9 /* AppDelegate.m */,
+				95032950200D9C6800436AC9 /* SessionsListViewController.h */,
+				95032951200D9C6800436AC9 /* SessionsListViewController.m */,
+				9503297B200DED9700436AC9 /* SessionDetailViewController.h */,
+				9503297C200DED9700436AC9 /* SessionDetailViewController.m */,
+				95032953200D9C6800436AC9 /* Main.storyboard */,
+				95032956200D9C6800436AC9 /* Assets.xcassets */,
+				95032958200D9C6800436AC9 /* LaunchScreen.storyboard */,
+				9503295B200D9C6800436AC9 /* Info.plist */,
+				9503295C200D9C6800436AC9 /* main.m */,
+			);
+			path = DroidKaigi2018;
+			sourceTree = "<group>";
+		};
+		95032965200D9C6800436AC9 /* DroidKaigi2018Tests */ = {
+			isa = PBXGroup;
+			children = (
+				95032966200D9C6800436AC9 /* DroidKaigi2018Tests.m */,
+				95032968200D9C6800436AC9 /* Info.plist */,
+			);
+			path = DroidKaigi2018Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		95032949200D9C6800436AC9 /* DroidKaigi2018 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9503296B200D9C6800436AC9 /* Build configuration list for PBXNativeTarget "DroidKaigi2018" */;
+			buildPhases = (
+				95032946200D9C6800436AC9 /* Sources */,
+				95032947200D9C6800436AC9 /* Frameworks */,
+				95032948200D9C6800436AC9 /* Resources */,
+				95032971200D9EA600436AC9 /* Compile Konan Binary */,
+				95032972200D9ED600436AC9 /* Swap Main Binary to Konan's Binary */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DroidKaigi2018;
+			productName = DroidKaigi2018;
+			productReference = 9503294A200D9C6800436AC9 /* DroidKaigi2018.app */;
+			productType = "com.apple.product-type.application";
+		};
+		95032961200D9C6800436AC9 /* DroidKaigi2018Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9503296E200D9C6800436AC9 /* Build configuration list for PBXNativeTarget "DroidKaigi2018Tests" */;
+			buildPhases = (
+				9503295E200D9C6800436AC9 /* Sources */,
+				9503295F200D9C6800436AC9 /* Frameworks */,
+				95032960200D9C6800436AC9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95032964200D9C6800436AC9 /* PBXTargetDependency */,
+			);
+			name = DroidKaigi2018Tests;
+			productName = DroidKaigi2018Tests;
+			productReference = 95032962200D9C6800436AC9 /* DroidKaigi2018Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		95032942200D9C6800436AC9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = DroidKaigi;
+				TargetAttributes = {
+					95032949200D9C6800436AC9 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					95032961200D9C6800436AC9 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 95032949200D9C6800436AC9;
+					};
+				};
+			};
+			buildConfigurationList = 95032945200D9C6800436AC9 /* Build configuration list for PBXProject "DroidKaigi2018" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 95032941200D9C6800436AC9;
+			productRefGroup = 9503294B200D9C6800436AC9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				95032949200D9C6800436AC9 /* DroidKaigi2018 */,
+				95032961200D9C6800436AC9 /* DroidKaigi2018Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		95032948200D9C6800436AC9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9503295A200D9C6800436AC9 /* LaunchScreen.storyboard in Resources */,
+				9503297A200DB2B500436AC9 /* build.gradle in Resources */,
+				95032957200D9C6800436AC9 /* Assets.xcassets in Resources */,
+				95032955200D9C6800436AC9 /* Main.storyboard in Resources */,
+				95032976200DB29100436AC9 /* src in Resources */,
+				95032979200DB2B500436AC9 /* CMakeLists.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95032960200D9C6800436AC9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		95032971200D9EA600436AC9 /* Compile Konan Binary */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Compile Konan Binary";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "../gradlew -p $SRCROOT :ios:compileKonanApp";
+		};
+		95032972200D9ED600436AC9 /* Swap Main Binary to Konan's Binary */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Swap Main Binary to Konan's Binary";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp \"$SRCROOT/build/konan/bin/iphone/app.kexe\" \"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		95032946200D9C6800436AC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95032952200D9C6800436AC9 /* SessionsListViewController.m in Sources */,
+				9503295D200D9C6800436AC9 /* main.m in Sources */,
+				9503297D200DED9700436AC9 /* SessionDetailViewController.m in Sources */,
+				9503294F200D9C6800436AC9 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9503295E200D9C6800436AC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95032967200D9C6800436AC9 /* DroidKaigi2018Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		95032964200D9C6800436AC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95032949200D9C6800436AC9 /* DroidKaigi2018 */;
+			targetProxy = 95032963200D9C6800436AC9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		95032953200D9C6800436AC9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95032954200D9C6800436AC9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		95032958200D9C6800436AC9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95032959200D9C6800436AC9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		95032969200D9C6800436AC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9503296A200D9C6800436AC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9503296C200D9C6800436AC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = DroidKaigi2018/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.droidkaigi.confsched2018.DroidKaigi2018;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9503296D200D9C6800436AC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = DroidKaigi2018/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.droidkaigi.confsched2018.DroidKaigi2018;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9503296F200D9C6800436AC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DroidKaigi2018Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.droidkaigi.confsched2018.DroidKaigi2018Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DroidKaigi2018.app/DroidKaigi2018";
+			};
+			name = Debug;
+		};
+		95032970200D9C6800436AC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DroidKaigi2018Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.droidkaigi.confsched2018.DroidKaigi2018Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DroidKaigi2018.app/DroidKaigi2018";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		95032945200D9C6800436AC9 /* Build configuration list for PBXProject "DroidKaigi2018" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95032969200D9C6800436AC9 /* Debug */,
+				9503296A200D9C6800436AC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9503296B200D9C6800436AC9 /* Build configuration list for PBXNativeTarget "DroidKaigi2018" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9503296C200D9C6800436AC9 /* Debug */,
+				9503296D200D9C6800436AC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9503296E200D9C6800436AC9 /* Build configuration list for PBXNativeTarget "DroidKaigi2018Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9503296F200D9C6800436AC9 /* Debug */,
+				95032970200D9C6800436AC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 95032942200D9C6800436AC9 /* Project object */;
+}

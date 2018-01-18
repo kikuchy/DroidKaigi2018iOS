@@ -3,6 +3,7 @@ package sessiondetail
 import kotlinx.cinterop.ExportObjCClass
 import kotlinx.cinterop.ObjCOutlet
 import kotlinx.cinterop.initBy
+import platform.CoreGraphics.CGRectGetHeight
 import platform.Foundation.NSCoder
 import platform.UIKit.*
 
@@ -23,6 +24,11 @@ class SessionDetailViewController(aDecoder: NSCoder) : UIViewController(aDecoder
         super.viewDidLoad()
 
         // FIXME: It's not elegant.
-        containerScroll.contentInset = UIEdgeInsetsMake(64.0 /* = Status bar height + Navigation bar height  */, 0.0, 0.0, 0.0)
+        containerScroll.contentInset = UIEdgeInsetsMake(
+                top = 64.0 /* = Status bar height + Navigation bar height  */,
+                left = 0.0,
+                bottom = tabBarController?.let { CGRectGetHeight(it.tabBar.frame) } ?: 0.0,
+                right = 0.0
+        )
     }
 }

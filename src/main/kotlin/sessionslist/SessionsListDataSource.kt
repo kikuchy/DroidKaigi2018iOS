@@ -14,12 +14,16 @@ class SessionsListDataSource(initialSessions: List<Session> = emptyList()): NSOb
 
     private val sessions: MutableList<Session> = mutableListOf<Session>().apply { addAll(initialSessions) }
 
+    fun sessionAtIndexPath(path: NSIndexPath): Session {
+        return sessions[path.row.toInt()]
+    }
+
     override fun tableView(tableView: UITableView, numberOfRowsInSection: NSInteger): NSInteger {
         return sessions.size.toLong()
     }
 
     override fun tableView(tableView: UITableView, cellForRowAtIndexPath: NSIndexPath): UITableViewCell {
-        val session = sessions[cellForRowAtIndexPath.row.toInt()]
+        val session = sessionAtIndexPath(cellForRowAtIndexPath)
         return tableView.dequeueReusableCellWithIdentifier("Session", cellForRowAtIndexPath).apply {
             textLabel?.text = when (session) {
                 is Session.SpeechSession -> session.title

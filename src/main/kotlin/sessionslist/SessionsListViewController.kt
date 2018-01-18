@@ -3,6 +3,7 @@ package sessionslist
 import kotlinx.cinterop.ExportObjCClass
 import kotlinx.cinterop.ObjCOutlet
 import kotlinx.cinterop.initBy
+import network.getSessions
 import platform.Foundation.NSCoder
 import platform.UIKit.UIEdgeInsetsMake
 import platform.UIKit.UITableView
@@ -18,6 +19,12 @@ class SessionsListViewController(aDecoder: NSCoder) : UIViewController(aDecoder)
         super.viewDidLoad()
         // FIXME: It's not elegant.
         sessionsTable.contentInset = UIEdgeInsetsMake(64.0 /* = Status bar height + Navigation bar height  */, 0.0, 0.0, 0.0)
-        sessionsTable.dataSource = SessionsListDataSource()
+
+        getSessions({ sessions, _, _, _ ->
+            sessionsTable.dataSource = SessionsListDataSource(sessions!!)
+            sessionsTable.reloadData()
+        }, { error ->
+            println(error)
+        })
     }
 }

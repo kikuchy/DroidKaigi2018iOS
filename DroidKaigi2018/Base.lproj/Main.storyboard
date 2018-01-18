@@ -20,7 +20,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="vfi-58-Q7o"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" id="cNh-Yu-OSt"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="ic_map" id="cNh-Yu-OSt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="57J-nI-y6U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -199,7 +199,7 @@
         <scene sceneID="0M7-Y0-Q62">
             <objects>
                 <navigationController id="SZG-MQ-nfs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Sessions" id="6ov-oq-TH6"/>
+                    <tabBarItem key="tabBarItem" title="Sessions" image="ic_session" id="6ov-oq-TH6"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WnE-tH-bDu">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -231,4 +231,8 @@
             <point key="canvasLocation" x="-74" y="-1"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_map" width="24" height="24"/>
+        <image name="ic_session" width="24" height="24"/>
+    </resources>
 </document>

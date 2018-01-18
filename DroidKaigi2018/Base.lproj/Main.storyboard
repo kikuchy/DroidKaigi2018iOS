@@ -62,7 +62,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="4Me-YP-2O7" kind="show" id="Vkb-tR-ff9"/>
+                                            <segue destination="4Me-YP-2O7" kind="show" identifier="ShowSession" id="Vkb-tR-ff9"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

@@ -1,17 +1,29 @@
-# ![](app/src/main/res/mipmap-mdpi/ic_launcher.png) DroidKaigi 2018 unofficial iOS app
+# DroidKaigi 2018 unofficial iOS app
+
+This project is **Kotlin/Native** iOS app of DroidKaigi2018.
+
+
+# Official Android app project
+
+[Official is here](https://github.com/DroidKaigi/conference-app-2018).
+
 
 # Features
+
 TBD
+
 
 # Contributing
 We are always welcome your contribution!
 
+You can find [open isssues here](https://github.com/kikuchy/DroidKaigi2018iOS/issues), `welcome contribute` or `easy` tagged issues are good for first contribute.
+
+Making new issues is welcome too!
+
+
 ## Before senfing PullRequest
 
-Please select `kikuchy/conference-app-2018` 's `master` branch as Base branch.
-Because Official repository is not acceptable iOS project yet. 
-
-And, don't include your team in `project.pbxproj` when commiting. :pray:
+Please, don't include your team in `project.pbxproj` when commiting. :pray:
 
 
 # Development Environment
@@ -55,10 +67,12 @@ The instance of Kotlin/Native iOS app is [KotlinConf 2017 app](https://github.co
     - If you using Personal Team, in first time, you have to accept your Signing Certificate from `Settings.app` > `General` > `Device Management `.
 
 ## Credit
-This project uses some modern Android libraries and source codes.
+This project uses some modern libraries and source codes.
 
 * [Kotlin](http://kotlinlang.org/) - JetBrains
 * [Kotlin/Native](https://github.com/JetBrains/kotlin-native/) - JetBrains
+* [kotlinconf-app](https://github.com/JetBrains/kotlinconf-app) - JetBranis
+* [conference-app-2018](https://github.com/DroidKaigi/conference-app-2018) - DroidKaigi
 
 ## License
 

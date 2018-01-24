@@ -3,8 +3,10 @@ package sessiondetail
 import entity.Session
 import entity.toReadableTimeString
 import kotlinx.cinterop.*
+import libs.sd_setImageWithURL
 import platform.CoreGraphics.CGRectGetHeight
 import platform.Foundation.NSCoder
+import platform.Foundation.NSURL
 import platform.UIKit.*
 
 @ExportObjCClass
@@ -38,7 +40,8 @@ class SessionDetailViewController(aDecoder: NSCoder) : UIViewController(aDecoder
             is Session.SpeechSession -> {
                 titleLabel.text = session.title
                 timeLabel.text = "DAY${session.dayNumber} / ${session.startTime.toReadableTimeString()} - ${session.endTime.toReadableTimeString()}"
-                // TODO: Put image asynchronously.
+                // TODO: Support displaying 2+ speakers.
+                speakerAvatarImage.sd_setImageWithURL(NSURL(URLString = session.speakers.first().imageUrl))
                 speakerNameLabel.text = session.speakers.first().name
                 placeLabel.text = session.room.name
                 descriptionText.text = session.desc

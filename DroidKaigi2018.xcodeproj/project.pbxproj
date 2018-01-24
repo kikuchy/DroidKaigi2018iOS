@@ -18,6 +18,7 @@
 		95032979200DB2B500436AC9 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 95032977200DB2B500436AC9 /* CMakeLists.txt */; };
 		9503297A200DB2B500436AC9 /* build.gradle in Resources */ = {isa = PBXBuildFile; fileRef = 95032978200DB2B500436AC9 /* build.gradle */; };
 		9503297D200DED9700436AC9 /* SessionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9503297C200DED9700436AC9 /* SessionDetailViewController.m */; };
+		AB2141A8EF271FAE10E3B17F /* Pods_DroidKaigi2018.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E703AB14A32584C6459A09EB /* Pods_DroidKaigi2018.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		51B94E897865B0B3642E2B84 /* Pods-DroidKaigi2018.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DroidKaigi2018.release.xcconfig"; path = "Pods/Target Support Files/Pods-DroidKaigi2018/Pods-DroidKaigi2018.release.xcconfig"; sourceTree = "<group>"; };
 		9503294A200D9C6800436AC9 /* DroidKaigi2018.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DroidKaigi2018.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9503294D200D9C6800436AC9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9503294E200D9C6800436AC9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		95032978200DB2B500436AC9 /* build.gradle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = build.gradle; sourceTree = "<group>"; };
 		9503297B200DED9700436AC9 /* SessionDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SessionDetailViewController.h; sourceTree = "<group>"; };
 		9503297C200DED9700436AC9 /* SessionDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SessionDetailViewController.m; sourceTree = "<group>"; };
+		CA5E42FAEC9B7FD7C723A235 /* Pods-DroidKaigi2018.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DroidKaigi2018.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DroidKaigi2018/Pods-DroidKaigi2018.debug.xcconfig"; sourceTree = "<group>"; };
+		E703AB14A32584C6459A09EB /* Pods_DroidKaigi2018.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DroidKaigi2018.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB2141A8EF271FAE10E3B17F /* Pods_DroidKaigi2018.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +74,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		60FB3639B5BC899FA70D07C1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA5E42FAEC9B7FD7C723A235 /* Pods-DroidKaigi2018.debug.xcconfig */,
+				51B94E897865B0B3642E2B84 /* Pods-DroidKaigi2018.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		95032941200D9C6800436AC9 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +92,8 @@
 				9503294C200D9C6800436AC9 /* DroidKaigi2018 */,
 				95032965200D9C6800436AC9 /* DroidKaigi2018Tests */,
 				9503294B200D9C6800436AC9 /* Products */,
+				60FB3639B5BC899FA70D07C1 /* Pods */,
+				B5677BDBD967EDA3FE7E0274 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +133,14 @@
 			path = DroidKaigi2018Tests;
 			sourceTree = "<group>";
 		};
+		B5677BDBD967EDA3FE7E0274 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E703AB14A32584C6459A09EB /* Pods_DroidKaigi2018.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -124,11 +148,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9503296B200D9C6800436AC9 /* Build configuration list for PBXNativeTarget "DroidKaigi2018" */;
 			buildPhases = (
+				59BC4E7F7AB68E4CE2209CB9 /* [CP] Check Pods Manifest.lock */,
 				95032946200D9C6800436AC9 /* Sources */,
 				95032947200D9C6800436AC9 /* Frameworks */,
 				95032948200D9C6800436AC9 /* Resources */,
 				95032971200D9EA600436AC9 /* Compile Konan Binary */,
 				95032972200D9ED600436AC9 /* Swap Main Binary to Konan's Binary */,
+				50284EB0715A1FD08EAFA42F /* [CP] Embed Pods Frameworks */,
+				610E841731E6C683188E3CE7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,6 +247,57 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		50284EB0715A1FD08EAFA42F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DroidKaigi2018/Pods-DroidKaigi2018-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DroidKaigi2018/Pods-DroidKaigi2018-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59BC4E7F7AB68E4CE2209CB9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DroidKaigi2018-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		610E841731E6C683188E3CE7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DroidKaigi2018/Pods-DroidKaigi2018-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		95032971200D9EA600436AC9 /* Compile Konan Binary */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -406,6 +484,7 @@
 		};
 		9503296C200D9C6800436AC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA5E42FAEC9B7FD7C723A235 /* Pods-DroidKaigi2018.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -420,6 +499,7 @@
 		};
 		9503296D200D9C6800436AC9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51B94E897865B0B3642E2B84 /* Pods-DroidKaigi2018.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

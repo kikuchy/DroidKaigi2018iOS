@@ -1,5 +1,6 @@
 package sessionslist
 
+import fixeddata.SpecialSessions
 import kotlinx.cinterop.*
 import network.getSessions
 import platform.CoreGraphics.CGRectGetHeight
@@ -26,8 +27,9 @@ class SessionsListViewController(aDecoder: NSCoder) : UIViewController(aDecoder)
         )
         sessionsTable.delegate = sessionsListDelegate
 
-        getSessions({ sessions, _, _, _ ->
-            sessionsTable.dataSource = SessionsListDataSource(sessions!!)
+        getSessions({ speakerSessions, _, _, _ ->
+            val allSession = (speakerSessions!! + SpecialSessions.getSessions()).sortedBy { it.startTime.getTime().toLong() }
+            sessionsTable.dataSource = SessionsListDataSource(allSession)
             sessionsTable.reloadData()
         }, { error ->
             println(error)

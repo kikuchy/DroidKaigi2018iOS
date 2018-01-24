@@ -10,7 +10,7 @@ import network.Category
 import network.CategoryItem
 import platform.Foundation.*
 
-private fun parseISO8601Date(raw: String): Date {
+fun parseISO8601Date(raw: String): Date {
     val nsDate = NSDateFormatter().apply {
         dateFormat = "YYYY-MM-dd'T'HH:mm:ss"
         calendar = NSCalendar.currentCalendar

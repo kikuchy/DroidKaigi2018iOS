@@ -22,6 +22,7 @@ cmake-build-*
 /build
 /captures
 .externalNativeBuild
+Pods
 
 # not ignore
 !.idea/codeStyleSettings.xml

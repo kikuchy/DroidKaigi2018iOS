@@ -21,11 +21,14 @@ fun parseISO8601Date(raw: String): Date {
     )
 }
 
+private val confStartsAt = parseISO8601Date("2018-02-08T10:00:00")
+
 fun parseSession(
         rawSession: NSDictionary,
         speakerTable: List<Speaker>,
         roomTable: List<Room>,
-        categoryTable: List<Category>
+        categoryTable: List<Category>,
+        conferenceStartsDate: Date = confStartsAt
 ): SpeechSession {
     val sessionFormats: List<CategoryItem> = categoryTable.first { it.id!! == 808 }.items!!.filterNotNull()
     val languages: List<CategoryItem> = categoryTable.first { it.id!! == 809 }.items!!.filterNotNull()
@@ -42,7 +45,7 @@ fun parseSession(
             id = rawSession.getString("id"),
             startTime = startTime,
             endTime = parseISO8601Date(rawSession.getString("endsAt")),
-            dayNumber = 1/* TODO */,
+            dayNumber = (startTime.getDate() - conferenceStartsDate.getDate() + 1).toInt(),
             title = rawSession.getString("title"),
             desc = rawSession.getString("description"),
             room = roomTable.first { it.id == roomId },

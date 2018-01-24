@@ -15,5 +15,21 @@ apply plugin: "konan"
 konan.targets = ["iphone"]
 
 konanArtifacts {
-    program("app")
+    def productsDir = new File("Frameworks").absolutePath
+
+    interop("libs") {
+        defFile "src/main/c_interop/libs.def"
+
+        compilerOpts "-F${productsDir}"
+        linkerOpts "-F${productsDir}"
+
+        includeDirs new File(".").getAbsolutePath()
+    }
+
+    program("app") {
+        linkerOpts "-rpath", "@executable_path/Frameworks", "-F${productsDir}"
+        libraries {
+            artifact "libs"
+        }
+    }
 }

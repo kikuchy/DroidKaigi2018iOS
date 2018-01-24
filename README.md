@@ -66,6 +66,16 @@ The instance of Kotlin/Native iOS app is [KotlinConf 2017 app](https://github.co
 1. Run and you can find `DroidKaigi2018` app in your home screen!
     - If you using Personal Team, in first time, you have to accept your Signing Certificate from `Settings.app` > `General` > `Device Management `.
 
+## How to add new pod
+
+It's little confusing for me (and maybe you).
+
+1. Add new pod into Podfile normally.
+1. Archive pod as framework. (Select that scheme in Xcode and `Product` > `Archive`)
+1. Copy framework from DerivedData into `Frameworks` directory.
+1. Run `compileKonanLibs` gradle task.
+
+
 ## Credit
 This project uses some modern libraries and source codes.
 

@@ -1,0 +1,5 @@
+headers = SDWebImage/UIImageView+WebCache.h
+headerFilter = SDWebImage/**
+language = Objective-C
+linkerOpts = -framework SDWebImage
+compilerOpts = -framework SDWebImage

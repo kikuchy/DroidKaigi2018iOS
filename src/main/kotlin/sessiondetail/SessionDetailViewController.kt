@@ -47,11 +47,11 @@ class SessionDetailViewController(aDecoder: NSCoder) : UIViewController(aDecoder
                 descriptionText.text = session.desc
             }
             is Session.SpecialSession -> {
-                // TODO: We need String title.
-//                titleLabel.text = session.title
+                titleLabel.text = session.title
                 timeLabel.text = "DAY${session.dayNumber} / ${session.startTime.toReadableTimeString()} - ${session.endTime.toReadableTimeString()}"
                 placeLabel.text = session.room?.name ?: ""
-                // TODO: Hide speakers area.
+                // TODO: Hide speakers area and description area.
+                descriptionText.text = ""
             }
         }
     }

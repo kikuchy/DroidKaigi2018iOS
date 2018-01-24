@@ -28,7 +28,7 @@ sealed class Session(
             override var dayNumber: Int,
             override var startTime: Date,
             override var endTime: Date,
-            var title: Int,
+            var title: String,
             var room: Room?
     ) : Session(id, dayNumber, startTime, endTime)
 

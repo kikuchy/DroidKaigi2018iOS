@@ -2,9 +2,7 @@ package sessiondetail
 
 import entity.Session
 import entity.toReadableTimeString
-import kotlinx.cinterop.ExportObjCClass
-import kotlinx.cinterop.ObjCOutlet
-import kotlinx.cinterop.initBy
+import kotlinx.cinterop.*
 import platform.CoreGraphics.CGRectGetHeight
 import platform.Foundation.NSCoder
 import platform.UIKit.*
@@ -18,7 +16,7 @@ class SessionDetailViewController(aDecoder: NSCoder) : UIViewController(aDecoder
     @ObjCOutlet lateinit var speakerNameLabel: UILabel
     @ObjCOutlet lateinit var timeLabel: UILabel
     @ObjCOutlet lateinit var placeLabel: UILabel
-    @ObjCOutlet lateinit var descriptionText: UITextView
+    @ObjCOutlet lateinit var descriptionText: UILabel
 
     lateinit var sessionToShow: Session
 

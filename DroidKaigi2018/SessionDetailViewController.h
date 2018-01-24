@@ -15,6 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *speakerNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *placeLabel;
-@property (weak, nonatomic) IBOutlet UITextView *descriptionText;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionText;
 
 @end

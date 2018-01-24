@@ -1,10 +1,12 @@
 package sessiondetail
 
-import kotlinx.cinterop.ExportObjCClass
-import kotlinx.cinterop.ObjCOutlet
-import kotlinx.cinterop.initBy
+import entity.Session
+import entity.toReadableTimeString
+import kotlinx.cinterop.*
+import libs.sd_setImageWithURL
 import platform.CoreGraphics.CGRectGetHeight
 import platform.Foundation.NSCoder
+import platform.Foundation.NSURL
 import platform.UIKit.*
 
 @ExportObjCClass
@@ -16,7 +18,9 @@ class SessionDetailViewController(aDecoder: NSCoder) : UIViewController(aDecoder
     @ObjCOutlet lateinit var speakerNameLabel: UILabel
     @ObjCOutlet lateinit var timeLabel: UILabel
     @ObjCOutlet lateinit var placeLabel: UILabel
-    @ObjCOutlet lateinit var descriptionText: UITextView
+    @ObjCOutlet lateinit var descriptionText: UILabel
+
+    lateinit var sessionToShow: Session
 
     override fun initWithCoder(aDecoder: NSCoder): UIViewController? = initBy(SessionDetailViewController(aDecoder))
 
@@ -30,5 +34,25 @@ class SessionDetailViewController(aDecoder: NSCoder) : UIViewController(aDecoder
                 bottom = tabBarController?.let { CGRectGetHeight(it.tabBar.frame) } ?: 0.0,
                 right = 0.0
         )
+
+        val session = sessionToShow
+        when (session) {
+            is Session.SpeechSession -> {
+                titleLabel.text = session.title
+                timeLabel.text = "DAY${session.dayNumber} / ${session.startTime.toReadableTimeString()} - ${session.endTime.toReadableTimeString()}"
+                // TODO: Support displaying 2+ speakers.
+                speakerAvatarImage.sd_setImageWithURL(NSURL(URLString = session.speakers.first().imageUrl))
+                speakerNameLabel.text = session.speakers.first().name
+                placeLabel.text = session.room.name
+                descriptionText.text = session.desc
+            }
+            is Session.SpecialSession -> {
+                // TODO: We need String title.
+//                titleLabel.text = session.title
+                timeLabel.text = "DAY${session.dayNumber} / ${session.startTime.toReadableTimeString()} - ${session.endTime.toReadableTimeString()}"
+                placeLabel.text = session.room?.name ?: ""
+                // TODO: Hide speakers area.
+            }
+        }
     }
 }

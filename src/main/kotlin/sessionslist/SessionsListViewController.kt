@@ -43,7 +43,7 @@ class SessionsListViewController(aDecoder: NSCoder) : UIViewController(aDecoder)
 
             val detailViewController = segue.destinationViewController.uncheckedCast<SessionDetailViewController>()
             val session = sessionsTable.dataSource!!.uncheckedCast<SessionsListDataSource>().sessionAtIndexPath(selectedPath)
-            // TODO: Put session data to SessionDetailViewController.
+            detailViewController.sessionToShow = session
         }
     }
 }

@@ -73,6 +73,7 @@ It's little confusing for me (and maybe you).
 1. Add new pod into Podfile normally.
 1. Archive pod as framework. (Select that scheme in Xcode and `Product` > `Archive`)
 1. Copy framework from DerivedData into `Frameworks` directory.
+1. Add header files we want to use in Kotlin, linker/compiler options into `src/main/c_interop/libs.def`.
 1. Run `compileKonanLibs` gradle task.
 
 

@@ -1,5 +1,5 @@
-headers = SDWebImage/UIImageView+WebCache.h
-headerFilter = SDWebImage/**
+headers = SDWebImage/UIImageView+WebCache.h GoogleMaps/GoogleMaps.h
+headerFilter = SDWebImage/** GoogleMaps/**
 language = Objective-C
-linkerOpts = -framework SDWebImage
-compilerOpts = -framework SDWebImage
+linkerOpts = -framework SDWebImage -framework GoogleMaps -framework GoogleMapsBase -framework GoogleMapsCore -framework Accelerate -framework CoreGraphics -framework CoreData -framework CoreLocation -framework CoreText -framework GLKit -framework ImageIO -framework OpenGLES -framework QuartzCore -framework SystemConfiguration
+compilerOpts = -framework SDWebImage -framework GoogleMaps -framework GoogleMapsBase -framework GoogleMapsCore

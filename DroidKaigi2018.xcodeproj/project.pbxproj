@@ -18,6 +18,7 @@
 		95032979200DB2B500436AC9 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 95032977200DB2B500436AC9 /* CMakeLists.txt */; };
 		9503297A200DB2B500436AC9 /* build.gradle in Resources */ = {isa = PBXBuildFile; fileRef = 95032978200DB2B500436AC9 /* build.gradle */; };
 		9503297D200DED9700436AC9 /* SessionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9503297C200DED9700436AC9 /* SessionDetailViewController.m */; };
+		9519E8652019B3AE0048D40B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9519E8642019B3AE0048D40B /* MapViewController.m */; };
 		AB2141A8EF271FAE10E3B17F /* Pods_DroidKaigi2018.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E703AB14A32584C6459A09EB /* Pods_DroidKaigi2018.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,8 @@
 		95032978200DB2B500436AC9 /* build.gradle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = build.gradle; sourceTree = "<group>"; };
 		9503297B200DED9700436AC9 /* SessionDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SessionDetailViewController.h; sourceTree = "<group>"; };
 		9503297C200DED9700436AC9 /* SessionDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SessionDetailViewController.m; sourceTree = "<group>"; };
+		9519E8632019B3AE0048D40B /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		9519E8642019B3AE0048D40B /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		CA5E42FAEC9B7FD7C723A235 /* Pods-DroidKaigi2018.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DroidKaigi2018.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DroidKaigi2018/Pods-DroidKaigi2018.debug.xcconfig"; sourceTree = "<group>"; };
 		E703AB14A32584C6459A09EB /* Pods_DroidKaigi2018.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DroidKaigi2018.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -120,6 +123,8 @@
 				95032958200D9C6800436AC9 /* LaunchScreen.storyboard */,
 				9503295B200D9C6800436AC9 /* Info.plist */,
 				9503295C200D9C6800436AC9 /* main.m */,
+				9519E8632019B3AE0048D40B /* MapViewController.h */,
+				9519E8642019B3AE0048D40B /* MapViewController.m */,
 			);
 			path = DroidKaigi2018;
 			sourceTree = "<group>";
@@ -289,9 +294,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DroidKaigi2018/Pods-DroidKaigi2018-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Versions/A/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -335,6 +345,7 @@
 			files = (
 				95032952200D9C6800436AC9 /* SessionsListViewController.m in Sources */,
 				9503295D200D9C6800436AC9 /* main.m in Sources */,
+				9519E8652019B3AE0048D40B /* MapViewController.m in Sources */,
 				9503297D200DED9700436AC9 /* SessionDetailViewController.m in Sources */,
 				9503294F200D9C6800436AC9 /* AppDelegate.m in Sources */,
 			);

@@ -1,6 +1,8 @@
 import kotlinx.cinterop.ExportObjCClass
 import kotlinx.cinterop.initBy
-import platform.Foundation.NSDictionary
+import kotlinx.cinterop.uncheckedCast
+import libs.GMSServices
+import platform.Foundation.*
 import platform.UIKit.*
 
 @ExportObjCClass
@@ -10,6 +12,8 @@ class AppDelegate : UIResponder(), UIApplicationDelegateProtocol {
     override fun init() = initBy(AppDelegate())
 
     override fun application(application: UIApplication, didFinishLaunchingWithOptions: NSDictionary?): Boolean {
+        val key = NSBundle.mainBundle.objectForInfoDictionaryKey("GoogleMapsAPIKey")?.uncheckedCast<NSString>().toString()
+        GMSServices.provideAPIKey(key)
         return true
     }
 

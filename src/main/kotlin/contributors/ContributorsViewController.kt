@@ -27,6 +27,7 @@ class ContributorsViewController(aDecoder: NSCoder) : UIViewController(aDecoder)
 
         tableView.delegate = delegate
 
+        // TODO: Paging.
         getContributors(1, { contributors ->
             tableView.dataSource = ContributorsListDataSource(contributors)
             tableView.reloadData()

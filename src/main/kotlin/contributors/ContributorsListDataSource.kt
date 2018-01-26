@@ -23,6 +23,7 @@ class ContributorsListDataSource(val contributors: List<Contributor>): NSObject(
         val contributor = contributorAtIndexPath(cellForRowAtIndexPath)
         return tableView.dequeueReusableCellWithIdentifier("Contributor", cellForRowAtIndexPath).apply {
             textLabel?.text = contributor.name
+            // TODO: Show avatar image of contributor.
         }
 
     }

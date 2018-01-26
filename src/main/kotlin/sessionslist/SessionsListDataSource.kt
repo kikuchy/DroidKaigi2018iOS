@@ -1,25 +1,32 @@
 package sessionslist
 
+import entity.Date
 import entity.Session
 import platform.Foundation.NSIndexPath
 import platform.UIKit.UITableView
 import platform.UIKit.UITableViewCell
 import platform.UIKit.UITableViewDataSourceProtocol
 import platform.UIKit.row
+import platform.UIKit.section
 import platform.darwin.NSInteger
 import platform.darwin.NSObject
 
 @Suppress("CONFLICTING_OVERLOADS")
 class SessionsListDataSource(initialSessions: List<Session> = emptyList()): NSObject(), UITableViewDataSourceProtocol {
 
-    private val sessions: MutableList<Session> = mutableListOf<Session>().apply { addAll(initialSessions) }
+    private val groupedSessions: List<Pair<Date, List<Session>>> =
+            initialSessions.groupBy { it.startTime }.toList().sortedBy { it.first.getTime().toLong() }
 
     fun sessionAtIndexPath(path: NSIndexPath): Session {
-        return sessions[path.row.toInt()]
+        return groupedSessions[path.section.toInt()].second[path.row.toInt()]
+    }
+
+    override fun numberOfSectionsInTableView(tableView: UITableView): NSInteger {
+        return groupedSessions.size.toLong()
     }
 
     override fun tableView(tableView: UITableView, numberOfRowsInSection: NSInteger): NSInteger {
-        return sessions.size.toLong()
+        return groupedSessions[numberOfRowsInSection.toInt()].second.size.toLong()
     }
 
     override fun tableView(tableView: UITableView, cellForRowAtIndexPath: NSIndexPath): UITableViewCell {

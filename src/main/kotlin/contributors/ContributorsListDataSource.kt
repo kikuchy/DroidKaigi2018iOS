@@ -1,7 +1,6 @@
 package contributors
 
 import entity.Contributor
-import libs.sd_setImageWithURL
 import platform.Foundation.NSIndexPath
 import platform.UIKit.UITableView
 import platform.UIKit.UITableViewCell

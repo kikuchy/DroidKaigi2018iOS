@@ -2,6 +2,7 @@ package sessionslist
 
 import entity.Date
 import entity.Session
+import entity.toReadableDateTimeString
 import platform.Foundation.NSIndexPath
 import platform.UIKit.UITableView
 import platform.UIKit.UITableViewCell
@@ -23,6 +24,10 @@ class SessionsListDataSource(initialSessions: List<Session> = emptyList()): NSOb
 
     override fun numberOfSectionsInTableView(tableView: UITableView): NSInteger {
         return groupedSessions.size.toLong()
+    }
+
+    override fun tableView(tableView: UITableView, titleForHeaderInSection: NSInteger): String? {
+        return groupedSessions[titleForHeaderInSection.toInt()].first.toReadableDateTimeString()
     }
 
     override fun tableView(tableView: UITableView, numberOfRowsInSection: NSInteger): NSInteger {

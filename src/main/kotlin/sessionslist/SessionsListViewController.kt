@@ -1,5 +1,6 @@
 package sessionslist
 
+import entity.Session
 import fixeddata.SpecialSessions
 import kotlinx.cinterop.*
 import network.getSessions
@@ -34,6 +35,17 @@ class SessionsListViewController(aDecoder: NSCoder) : UIViewController(aDecoder)
         }, { error ->
             println(error)
         })
+    }
+
+    override fun shouldPerformSegueWithIdentifier(identifier: String, sender: ObjCObject?): Boolean {
+        return if (identifier == "ShowSession" && sender != null) {
+            val selectedCell = sender.uncheckedCast<UITableViewCell>()
+            val selectedPath = sessionsTable.indexPathForCell(selectedCell) ?: return false
+
+            val session = sessionsTable.dataSource!!.uncheckedCast<SessionsListDataSource>().sessionAtIndexPath(selectedPath)
+            return session is Session.SpeechSession
+        } else
+            super.shouldPerformSegueWithIdentifier(identifier, sender)
     }
 
     override fun prepareForSegue(segue: UIStoryboardSegue, sender: ObjCObject?) {

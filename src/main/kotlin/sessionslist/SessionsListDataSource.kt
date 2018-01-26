@@ -7,6 +7,8 @@ import platform.Foundation.NSIndexPath
 import platform.UIKit.UITableView
 import platform.UIKit.UITableViewCell
 import platform.UIKit.UITableViewDataSourceProtocol
+import platform.UIKit.UITableViewCellAccessoryNone
+import platform.UIKit.UITableViewCellAccessoryDisclosureIndicator
 import platform.UIKit.row
 import platform.UIKit.section
 import platform.darwin.NSInteger
@@ -44,6 +46,10 @@ class SessionsListDataSource(initialSessions: List<Session> = emptyList()): NSOb
             detailTextLabel?.text = when (session) {
                 is Session.SpeechSession -> "${session.speakers.first().name} -- ${session.room.name}"
                 is Session.SpecialSession -> session.room?.name ?: ""
+            }
+            accessoryType = when (session) {
+                is Session.SpeechSession -> UITableViewCellAccessoryDisclosureIndicator
+                is Session.SpecialSession -> UITableViewCellAccessoryNone
             }
         }
     }

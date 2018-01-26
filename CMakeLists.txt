@@ -13,6 +13,6 @@ cinterop(
 konanc_executable(
     NAME conference-app-2018
     TARGET iphone
-    SOURCES src/main/kotlin build/konan/libs/iphone
+    SOURCES src/main/kotlin
 )
 

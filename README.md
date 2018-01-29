@@ -10,9 +10,9 @@ This project is **Kotlin/Native** iOS app of DroidKaigi2018.
 
 # Features
 
-![List of sessions](art/screenshot_sessions.png)
-![Map](art/screenshot_map.png)
-![List of contributors](art/screenshot_contributors.png)
+![List of sessions](art/screenshot_sessions.jpeg)
+![Map](art/screenshot_map.jpeg)
+![List of contributors](art/screenshot_contributors.jpeg)
 
 * Check all od sessions.
 * Find the place of DroidKaigi held.

@@ -10,8 +10,13 @@ This project is **Kotlin/Native** iOS app of DroidKaigi2018.
 
 # Features
 
-TBD
+![List of sessions](art/screenshot_sessions.jpeg)
+![Map](art/screenshot_map.jpeg)
+![List of contributors](art/screenshot_contributors.jpeg)
 
+* Check all of sessions.
+* Find the place of DroidKaigi will be held.
+* See contributors of this app. (Please encourage us!)
 
 # Contributing
 We are always welcome your contribution!

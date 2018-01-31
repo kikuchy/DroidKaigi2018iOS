@@ -56,7 +56,10 @@ class SessionsListViewController(aDecoder: NSCoder) : UIViewController(aDecoder)
             val selectedPath = sessionsTable.indexPathForCell(selectedCell) ?: return
 
             val detailViewController = segue.destinationViewController.uncheckedCast<SessionDetailViewController>()
-            val session = sessionsTable.dataSource!!.uncheckedCast<SessionsListDataSource>().sessionAtIndexPath(selectedPath)
+            val session = sessionsTable
+                    .dataSource!!
+                    .uncheckedCast<SessionsListDataSource>()
+                    .sessionAtIndexPath(selectedPath) as? Session.SpeechSession ?: return
             detailViewController.sessionToShow = session
         }
     }

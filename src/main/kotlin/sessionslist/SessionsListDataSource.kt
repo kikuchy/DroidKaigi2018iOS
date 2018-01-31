@@ -9,6 +9,8 @@ import platform.UIKit.UITableViewCell
 import platform.UIKit.UITableViewDataSourceProtocol
 import platform.UIKit.UITableViewCellAccessoryNone
 import platform.UIKit.UITableViewCellAccessoryDisclosureIndicator
+import platform.UIKit.UITableViewCellSelectionStyleDefault
+import platform.UIKit.UITableViewCellSelectionStyleNone
 import platform.UIKit.row
 import platform.UIKit.section
 import platform.darwin.NSInteger
@@ -41,7 +43,7 @@ class SessionsListDataSource(initialSessions: List<Session> = emptyList()): NSOb
         return tableView.dequeueReusableCellWithIdentifier("Session", cellForRowAtIndexPath).apply {
             textLabel?.text = when (session) {
                 is Session.SpeechSession -> session.title
-                is Session.SpecialSession -> session.title.toString()
+                is Session.SpecialSession -> session.title
             }
             detailTextLabel?.text = when (session) {
                 is Session.SpeechSession -> "${session.speakers.first().name} -- ${session.room.name}"
@@ -50,6 +52,10 @@ class SessionsListDataSource(initialSessions: List<Session> = emptyList()): NSOb
             accessoryType = when (session) {
                 is Session.SpeechSession -> UITableViewCellAccessoryDisclosureIndicator
                 is Session.SpecialSession -> UITableViewCellAccessoryNone
+            }
+            selectionStyle = when (session) {
+                is Session.SpeechSession -> UITableViewCellSelectionStyleDefault
+                is Session.SpecialSession -> UITableViewCellSelectionStyleNone
             }
         }
     }

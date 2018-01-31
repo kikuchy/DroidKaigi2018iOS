@@ -5,6 +5,7 @@ import extension.map
 import kotlinx.cinterop.uncheckedCast
 import network.parsing.parseContributor
 import platform.Foundation.*
+import platform.UIKit.UIApplication
 
 
 fun getContributors(
@@ -19,6 +20,7 @@ fun getContributors(
     )
     val url = NSURL(URLString = "https://api.github.com/repos/kikuchy/DroidKaigi2018iOS/contributors?per_page=100&page=$page")
     session.dataTaskWithURL(url) { data, _, error ->
+        UIApplication.sharedApplication.networkActivityIndicatorVisible = false
         assert(NSThread.isMainThread)
 
         if (error != null) {
@@ -42,4 +44,5 @@ fun getContributors(
         val contributors = rawContributors.map<NSDictionary, Contributor> { parseContributor(it) }
         onSuccess(contributors)
     }.resume()
+    UIApplication.sharedApplication.networkActivityIndicatorVisible = true
 }

@@ -11,6 +11,7 @@ import network.parsing.parseRoom
 import network.parsing.parseSession
 import network.parsing.parseSpeaker
 import platform.Foundation.*
+import platform.UIKit.UIApplication
 
 
 data class Category(
@@ -37,6 +38,7 @@ fun getSessions(
     )
     val url = NSURL(URLString = "https://droidkaigi.jp/2018/sessionize/all.json")
     session.dataTaskWithURL(url) { data, _, error ->
+        UIApplication.sharedApplication.networkActivityIndicatorVisible = false
         assert(NSThread.isMainThread)
 
         if (error != null) {
@@ -67,4 +69,5 @@ fun getSessions(
         val sessions: List<Session> = rawSessions.map<NSDictionary, Session> { parseSession(it, speakers, rooms, categories) }
         onSuccess(sessions, rooms, speakers, categories)
     }.resume()
+    UIApplication.sharedApplication.networkActivityIndicatorVisible = true
 }

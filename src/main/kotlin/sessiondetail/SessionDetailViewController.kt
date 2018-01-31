@@ -20,7 +20,7 @@ class SessionDetailViewController(aDecoder: NSCoder) : UIViewController(aDecoder
     @ObjCOutlet lateinit var placeLabel: UILabel
     @ObjCOutlet lateinit var descriptionText: UILabel
 
-    lateinit var sessionToShow: Session
+    lateinit var sessionToShow: Session.SpeechSession
 
     override fun initWithCoder(aDecoder: NSCoder): UIViewController? = initBy(SessionDetailViewController(aDecoder))
 
@@ -35,24 +35,13 @@ class SessionDetailViewController(aDecoder: NSCoder) : UIViewController(aDecoder
                 right = 0.0
         )
 
-        val session = sessionToShow
-        when (session) {
-            is Session.SpeechSession -> {
-                titleLabel.text = session.title
-                timeLabel.text = "DAY${session.dayNumber} / ${session.startTime.toReadableTimeString()} - ${session.endTime.toReadableTimeString()}"
-                // TODO: Support displaying 2+ speakers.
-                speakerAvatarImage.sd_setImageWithURL(NSURL(URLString = session.speakers.first().imageUrl))
-                speakerNameLabel.text = session.speakers.first().name
-                placeLabel.text = session.room.name
-                descriptionText.text = session.desc
-            }
-            is Session.SpecialSession -> {
-                titleLabel.text = session.title
-                timeLabel.text = "DAY${session.dayNumber} / ${session.startTime.toReadableTimeString()} - ${session.endTime.toReadableTimeString()}"
-                placeLabel.text = session.room?.name ?: ""
-                // TODO: Hide speakers area and description area.
-                descriptionText.text = ""
-            }
-        }
+        title = sessionToShow.title
+        titleLabel.text = sessionToShow.title
+        timeLabel.text = "DAY${sessionToShow.dayNumber} / ${sessionToShow.startTime.toReadableTimeString()} - ${sessionToShow.endTime.toReadableTimeString()}"
+        // TODO: Support displaying 2+ speakers.
+        speakerAvatarImage.sd_setImageWithURL(NSURL(URLString = sessionToShow.speakers.first().imageUrl))
+        speakerNameLabel.text = sessionToShow.speakers.first().name
+        placeLabel.text = sessionToShow.room.name
+        descriptionText.text = sessionToShow.desc
     }
 }

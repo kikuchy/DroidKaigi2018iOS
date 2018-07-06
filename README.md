@@ -46,7 +46,7 @@ To compile Kotlin/Native use following steps:
 
 ```
 git clone https://github.com/JetBrains/kotlin-native.git
-cd kotlin-native.git
+cd kotlin-native
 ./gradlew dependencies:update
 # this may take around a hour
 ./gradlew dist distPlatformLibs
